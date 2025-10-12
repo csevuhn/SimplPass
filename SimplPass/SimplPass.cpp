@@ -1,19 +1,13 @@
 #include <iostream>
 #include <fstream>
 #include <limits>
+#include "Helpers/MessageHelper.h"
 
 void displayMsg(const std::string& msg)
 {
     std::cout << msg << std::endl; 
 }
 
-void displayMenu()
-{
-    displayMsg("Welcome to SimplPass");
-    displayMsg("1. Add Password");
-    displayMsg("2. View Passwords");
-    displayMsg("3. Quit");
-}
 
 void saveDetails(const std::string& site, const std::string& username, const std::string& password)
 {
@@ -56,7 +50,7 @@ int main()
 
     do
     {
-        displayMenu();
+        MessageHelper.displayMenu();
 
         std::cin >> choice;
 
