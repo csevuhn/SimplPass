@@ -3,6 +3,7 @@
 #include <limits>
 #include "Helpers/MessageHelper.h"
 
+
 void displayMsg(const std::string& msg)
 {
     std::cout << msg << std::endl; 
@@ -50,7 +51,8 @@ int main()
 
     do
     {
-        MessageHelper.displayMenu();
+        MessageHelper msghelper;
+        msghelper.displayMenu();
 
         std::cin >> choice;
 
