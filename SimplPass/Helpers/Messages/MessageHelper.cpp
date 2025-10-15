@@ -5,6 +5,7 @@
 
 
 
+
 void MessageHelper::displayMenu()
 {
     std::cout << "Welcome to SimplPass\n"
@@ -16,4 +17,9 @@ void MessageHelper::displayMenu()
                 
 
     << "\n";
+}
+
+void printError(std::string message)
+{
+    std::cout << "[ERR] Error: " << message << "\n";
 }

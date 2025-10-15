@@ -1,12 +1,13 @@
 #include <iostream>
 #include <fstream>
 #include <limits>
-#include "Helpers/MessageHelper.h"
+#include "Helpers/Messages/MessageHelper.h"
+
 
 
 void displayMsg(const std::string& msg)
 {
-    std::cout << msg << std::endl; 
+    std::cout << msg << "\n"; 
 }
 
 
@@ -21,7 +22,8 @@ void saveDetails(const std::string& site, const std::string& username, const std
     }
     else
     {
-        std::cerr << "Error: Unable to open file for writing. \n";
+        MessageHelper msghelper;
+        msghelper.printError("Unable to open file for writing.");
     }
 }
 
@@ -40,11 +42,12 @@ void loadPasswords()
         file.close();
     } else
     {
-            std::cerr << "\n[System] No passwords saved yet.\n";
+            MessageHelper msghelper;
+            msghelper.printError("No passwords saved yet.");
     }
 }
 
-int main()
+int main() 
 {
     int choice;
     std::string site, password, username;
@@ -80,7 +83,7 @@ int main()
                 displayMsg("\n Exiting...");
                 break;
         default:
-            displayMsg("\n Invalid choice");
+            msghelper.printError("Invalid option");
             break;
 
         }
