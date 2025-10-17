@@ -16,7 +16,7 @@ void checkForUpdates()
 
 std::string getCurrentVersion()
 {
-    std::ifstream configFile("../config.json");  
+    /*std::ifstream configFile("../config.json");  
     if (!configFile.is_open()) {
         std::cout << "[err] failed to open config.json\n";
         return "";
@@ -131,7 +131,7 @@ std::string getCurrentVersion()
 
         WinHttpCloseHandle(hRequest);
         WinHttpCloseHandle(hConnect);
-        WinHttpCloseHandle(hSession);
+        WinHttpCloseHandle(hSession);*/
     }
 
 
