@@ -2,6 +2,7 @@
 #include <fstream>
 #include <limits>
 #include "Helpers/Messages/MessageHelper.h"
+#include "Encryption/EncryptionHandler.h"
 
 
 
@@ -18,12 +19,12 @@ void saveDetails(const std::string& site, const std::string& username, const std
     {
         file << site << " " << username << " " << password << "\n";
         file.close();
-        std::cout << "Password for site "<< site << " saved successfully.\n";
+        std::cout << "password for site "<< site << " saved successfully.\n";
     }
     else
     {
         MessageHelper msghelper;
-        msghelper.printError("Unable to open file for writing.");
+        msghelper.printError("unable to open file for writing.");
     }
 }
 
@@ -36,14 +37,14 @@ void loadPasswords()
         displayMsg("\n Saved passwords:");
         while (file >> site >> username >> password)
         {
-            std::cout << " Site: " << site << " Username: " << username << " Password: " << password << "\n";
+            std::cout << " site: " << site << " username: " << username << " password: " << password << "\n";
             
         }
         file.close();
     } else
     {
             MessageHelper msghelper;
-            msghelper.printError("No passwords saved yet.");
+            msghelper.printError("no passwords saved yet.");
     }
 }
 
@@ -68,11 +69,11 @@ int main()
         switch(choice)
         {
             case 1:
-                displayMsg("Enter site name: ");
+                displayMsg("enter site name: ");
                 std::cin >> site;
-                displayMsg("Enter username: ");
+                displayMsg("enter username: ");
                 std::cin >> username;
-                displayMsg("Enter password: ");
+                displayMsg("enter password: ");
                 std::cin >> password;
                 saveDetails(site, username, password);
                 break;
@@ -80,10 +81,10 @@ int main()
                 loadPasswords();
                 break;
             case 3:
-                displayMsg("\n Exiting...");
+                displayMsg("\n exiting...");
                 break;
         default:
-            msghelper.printError("Invalid option");
+            msghelper.printError("invalid option");
             break;
 
         }

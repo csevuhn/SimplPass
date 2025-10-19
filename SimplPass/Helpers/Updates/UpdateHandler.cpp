@@ -132,6 +132,7 @@ std::string getCurrentVersion()
         WinHttpCloseHandle(hRequest);
         WinHttpCloseHandle(hConnect);
         WinHttpCloseHandle(hSession);*/
+        return 0;
     }
 
 
