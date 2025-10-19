@@ -24,6 +24,8 @@ Remember - SimplPass can protect your passwords to an **extent**. Due to how Sim
 
 SimplPass is extremely buggy in it's current state and alot of stuff just doesnt work. If you genuinely intend on using it then be prepared to mess with some of the code to egt it working. Not much work is needed it's basically just the encryption that doesnt work.
 
+If you want to use SimplPass without the encryption or just want the base to add your own stuff to it, the link to the first functional version is [here](https://github.com/csevuhn/SimplPass/tree/52fbbb442dc8308db01f9b5fbb8131a98553568e) (using SimplPass without encryption is NOT recommended as it is extremely insecure.)
+
 ### Contact
 
 Email: cseven@cock.li
