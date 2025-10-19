@@ -96,10 +96,10 @@ bool EncryptionHandler::encryptFile(const std::string& data)
             throw std::runtime_error("[err] cannot open passwords file for writing");
         }
 
-        outFile.write(reinterpret_cast<const char*>(salt.data()), salt.size());
-        outFile.write(reinterpret_cast<const char*>(nonce.data()), nonce.size());
-        outFile.write(reinterpret_cast<const char*>(tag.data()), tag.size());
-        outFile.write(reinterpret_cast<const char*>(ciphertext.data()), ciphertextLength());
+        outFile.write(reinterpret_cast<const char*>(salt.data()), static_cast<std::streamsize>(salt.size()));
+        outFile.write(reinterpret_cast<const char*>(nonce.data()), static_cast<std::streamsize>(nonce.size()));
+        outFile.write(reinterpret_cast<const char*>(tag.data()), static_cast<std::streamsize>(tag.size()));
+        outFile.write(reinterpret_cast<const char*>(ciphertext.data()), static_cast<std::streamsize>(ciphertextLength));
         outFile.close();
 
         return true;
