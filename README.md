@@ -13,10 +13,16 @@ Remember - SimplPass can protect your passwords to an **extent**. Due to how Sim
 ## To do
 
 - [x] Make it functional
-- [ ] Add encryption
+- [x] Add encryption
 - [ ] Add master password
 - [ ] Add more security in general
+- [ ] Make encryption less buggy
 - [ ] GUI version?
+
+
+## Note
+
+SimplPass is extremely buggy in it's current state and alot of stuff just doesnt work. If you genuinely intend on using it then be prepared to mess with some of the code to egt it working. Not much work is needed it's basically just the encryption that doesnt work.
 
 ### Contact
 
